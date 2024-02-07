@@ -39,6 +39,6 @@ jobs:
       - name: Build
         run: cmake --build ${{github.workspace}}/build-${{ runner.os }} --config Release --target caesium_image_compressor
       - name: Install
-        run: cmake --install
+        run: cmake --install .
       - name: Package
         run: cpack -G DEB
